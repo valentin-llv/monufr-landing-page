@@ -1,0 +1,175 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Override rem size */
+
+:root {
+    font-size: 11.2px;
+}
+
+/* Variables */
+
+:root {
+    --color-900-dark: #0b0e11;
+    --color-800-dark: #151a21;
+    --color-700-dark: #242c37;
+    --color-600-dark: #323d4d;
+    --color-300-dark: #5d7290;
+    --color-200-dark: #b2bdcd;
+    --color-100-dark: #dee3ea;
+
+    --color-900-light: #dee3ea;
+    --color-800-light: #cfd7e2;
+    --color-700-light: #b9c0ca;
+    --color-600-light: #323d4d;
+    --color-300-light: #242c37;
+    --color-200-light: #151a21;
+    --color-100-light: #0b0e11;
+
+    --color-900: var(--color-900-dark);
+    --color-800: var(--color-800-dark);
+    --color-700: var(--color-700-dark);
+    --color-600: var(--color-600-dark);
+    --color-300: var(--color-300-dark);
+    --color-200: var(--color-200-dark);
+    --color-100: var(--color-100-dark);
+
+    --color-accent-1: #49b583;
+}
+
+@media screen and (prefers-color-scheme: light) {
+    :root {
+        --color-900: var(--color-900-light);
+        --color-800: var(--color-800-light);
+        --color-700: var(--color-700-light);
+        --color-600: var(--color-600-light);
+        --color-300: var(--color-300-light);
+        --color-200: var(--color-200-light);
+        --color-100: var(--color-100-light);
+    }
+}
+
+/* Body */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--color-900);
+    color: var(--color-100);
+    overscroll-behavior-y: contain;
+}
+
+#app {
+    background-color: var(--color-900);
+}
+
+/* General style */
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+    color: var(--color-100);
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+/* New Tailwind classes */
+
+.bg-accent {
+    background-color: var(--color-accent-1);
+}
+
+.stroke-accent {
+    stroke: var(--color-accent-1);
+}
+
+.stroke-100 {
+    stroke: var(--color-100);
+}
+
+.color-200 {
+    color: var(--color-200);
+}
+
+.bg-700 {
+    background-color: var(--color-700);
+}
+
+.bg-800 {
+    background-color: var(--color-800);
+}
+
+.bg-900 {
+    background-color: var(--color-900);
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.inset-shadow {
+    box-shadow: inset 0px -95px 30px -40px var(--color-900);
+}
+
+.over-grid {
+    display: grid;
+    grid-column: 1fr;
+    grid-row: 1fr;
+}
+
+.over-grid img {
+    grid-area: 1 / 1;
+}
+
+/* SVF glow effect */
+
+@media screen and (prefers-color-scheme: dark) {
+    .glow rect, .glow path {
+        filter: drop-shadow(0px 0px 12px var(--color-100));
+    }
+}
+
+.glow-accent {
+    box-shadow: 0px 0px 40px 1px #49b583AA; 
+}
+
+/* Selection */
+
+::selection {
+    color: var(--color-100);
+    background-color: var(--color-accent-1);
+}
+
+/* Scroll bar */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-700);
+    border-radius: 150px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-600);
+}
+
+@media screen and (max-width: 1000px) { 
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+}
