@@ -1,3 +1,3 @@
 # MonUFR website
 
-Présentation website for my app called MonUFR.
+Landing page for my app called MonUFR.
