@@ -13,20 +13,20 @@
                     <div class="p-6 pb-20 pt-0 md:p-10 mt-28 md:mt-0 bg-900 md:bg-transparent">
                         <Transition name="fade">
                             <h1 v-if=onloadAnim class="text-4xl md:text-6xl font-medium" :style="{ 'transition-delay': (transitionDelays ? '200ms' : '0ms') }">
-                                Votre emploi du temps et vos mails dans votre poche&nbsp;!
+                                Votre emploi du temps dans votre poche&nbsp;!
                             </h1>
                         </Transition>
                         
                         <Transition name="fade">
                             <Text2 v-if=onloadAnim class="mt-7 md:mt-14" :style="{ 'transition-delay': (transitionDelays ? '200ms' : '0ms') }">
-                                Retrouvez votre emploi, vos mails, votre liste des tâches et bien plus dans l'application MonUFR.
+                                Retrouvez votre emploi, votre liste des tâches et bien plus dans l'application MonUFR.
                                 <br/><br />
                                 Plus rapide, plus simple et même hors ligne.
                             </Text2>
                         </Transition>
                         
                         <Transition name="fade">
-                            <a href="https://app.ufr-planning.com/">
+                            <a href="https://app.monufr.fr/">
                                 <AccentButton v-if=onloadAnim class="mt-8 md:mt-20 w-min m-auto glow-accent hover:scale-105 hover:-translate-y-2" :style="{ 'transition-delay': (transitionDelays ? '1200ms' : '0ms') }">
                                     <Text2>Télécharger&nbsp;maintenant</Text2>
                                 </AccentButton>
@@ -47,14 +47,6 @@
                                     <div class="flex flex-row items-center select-none duration-200 hover:translate-x-2">
                                         <Planning class="h-12 md:h-14 stroke-100 glow" />
                                         <Header3 class="text-2xl ml-4">EDT</Header3>
-                                        <RightArrow class="h-12 w-12 stroke-100 hidden sm:block glow" />
-                                    </div>
-                                </router-link>
-
-                                <router-link to="#block2" key=2 @click="tileSelected = 2" v-if=onloadAnim :style="{ 'transition-delay': (transitionDelays ? '700ms' : '0ms') }">
-                                    <div class="flex flex-row items-center select-none duration-200 hover:translate-x-2">
-                                        <Mails class="h-12 md:h-14 stroke-100 glow" />
-                                        <Header3 class="text-2xl ml-4">Mails</Header3>
                                         <RightArrow class="h-12 w-12 stroke-100 hidden sm:block glow" />
                                     </div>
                                 </router-link>
@@ -88,7 +80,6 @@
                         <div class="over-grid">
                             <TransitionGroup name="fade">
                                 <img v-if="tileSelected == 1" class="max-h-[400px] md:max-h-[500px] lg:max-h-[600px]" src="@/assets/images/phone2.webp" />
-                                <img v-if="tileSelected == 2" class="max-h-[400px] md:max-h-[500px] lg:max-h-[600px]" src="@/assets/images/phone3.webp" />
                                 <img v-if="tileSelected == 3" class="max-h-[400px] md:max-h-[500px] lg:max-h-[600px]" src="@/assets/images/phone4.webp" />
                             </TransitionGroup>
                         </div>
@@ -124,22 +115,6 @@
                                     </div>
                                 </div>
 
-                                <div class="flex flex-row w-full" @click="tileSelected = 2">
-                                    <div>
-                                        <div class="p-3 rounded-xl duration-300" :class="{ 'bg-accent': tileSelected == 2 }">
-                                            <Mails class="h-14 stroke-accent duration-300" :class="{ 'stroke-100': tileSelected == 2 }" />
-                                        </div>
-                                    </div>
-
-                                    <div class="flex-1 ml-8">
-                                        <Header2>Gardez un oeil sur les informations importantes</Header2>
-
-                                        <Text2 class="mt-2">
-                                            Consulter votre messagerie à tout moment et conserver vos mails les plus important pour les consulter même hors ligne.
-                                        </Text2>
-                                    </div>
-                                </div>
-
                                 <div class="flex flex-row w-full" @click="tileSelected = 3">
                                     <div>
                                         <div class="p-3 rounded-xl duration-300" :class="{ 'bg-accent': tileSelected == 3 }">
@@ -169,7 +144,7 @@
             <div class="flex-1 flex flex-col items-center">
                 <h2 class="text-4xl md:text-6xl font-medium">Alors qu'attendez vous&nbsp;?</h2>
 
-                <a href="https://app.ufr-planning.com/">
+                <a href="https://app.monufr.fr/">
                     <AccentButton v-if=onloadAnim class="mt-8 md:mt-20 w-min glow-accent hover:scale-105 hover:-translate-y-2" :style="{ 'transition-delay': (transitionDelays ? '1200ms' : '0ms') }">
                         <Text2>Télécharger&nbsp;maintenant</Text2>
                     </AccentButton>
@@ -192,7 +167,6 @@
     import Blob1 from "@/ui/blobs/Blob1.vue";
     import RightArrow from "@/icons/RightArrow.vue";
     import Planning from "@/icons/Planning.vue";
-    import Mails from "@/icons/Mails.vue";
     import Todo from "@/icons/Todo.vue";
     import { onMounted, ref } from "vue";
     import Header2 from "@/ui/header/Header2.vue";

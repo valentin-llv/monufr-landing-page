@@ -2,7 +2,7 @@
     <div class="w-full p-10 flex flex-row gap-10">
         <RouterLink to="/" class="flex-1">
             <div class="flex flex-row items-center duration-300">
-                <img src="@/assets/favicon/favicon.png" class="h-14 sm:h-20" />
+                <img src="/favicon/favicon.png" class="h-14 sm:h-20" />
                 <Header1 class="ml-5">MonUFR</Header1>
             </div>
         </RouterLink>
@@ -14,7 +14,7 @@
                 </div>
             </RouterLink>
 
-            <a href="https://app.ufr-planning.com/">
+            <a href="https://app.monufr.fr/">
                 <AccentButton class="hidden sm:block hover:-translate-y-1.5">
                     <Header3>Télécharger</Header3>
                 </AccentButton>
@@ -31,7 +31,3 @@
 
     import { RouterLink } from 'vue-router';
 </script>
-
-<style scoped>
-
-</style>

@@ -9,7 +9,7 @@
                 <div class="flex-1 flex flex-col">
                     <RouterLink to="/">
                         <div class="flex flex-row items-center">
-                            <img src="@/assets/favicon/favicon.png" class="h-14 sm:h-20" />
+                            <img src="/favicon/favicon.png" class="h-14 sm:h-20" />
                             <Header1 class="ml-5">MonUFR</Header1>
                         </div>
                     </RouterLink>
@@ -26,7 +26,7 @@
                 </div>
 
                 <div>
-                    <a href="https://app.ufr-planning.com/">
+                    <a href="https://app.monufr.fr/">
                         <AccentButton class="hover:-translate-y-1.5">
                             <Header3>Télécharger</Header3>
                         </AccentButton>
@@ -37,7 +37,7 @@
             <div class="mt-20">
                 <hr class="opacity-90" />
 
-                <Text class="color-200 mt-5">©2022 MonUFR. All rights reserved. <a target="_blank" href="https://valentin-lelievre.com">Valentin Le Lièvre</a></Text>
+                <Text class="color-200 mt-5">©2022 MonUFR . All rights reserved . <a target="_blank" href="https://valentin-lelievre.com">Valentin Le Lièvre</a></Text>
             </div>
         </div>
     </div>
